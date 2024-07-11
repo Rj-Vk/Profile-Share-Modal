@@ -1,0 +1,113 @@
+body {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+#circle1 {
+    background: linear-gradient(-25deg, #d84869, #f46641);
+    box-shadow: 0 0 50px #d84869;
+    animation: circle1Animate 15s infinite;
+}
+@keyframes circle1Animate {
+    50% {
+        left: 33%;
+        top: 4%;
+        scale: 1.11;
+    }
+}
+
+#circle2 {
+    background-image: linear-gradient(-25deg, #5648d8, #8641f4);
+    box-shadow: 0 0 50px #5648d8;
+    animation: circle2Animate 8s infinite;
+}
+@keyframes circle2Animate {
+    50% {
+        bottom: 6%;
+        right: 31%;
+    }
+}
+
+#card-section {
+    backdrop-filter: blur(15px);
+    background: #ffffff1a;
+}
+
+.icon {
+    border: 1px solid #ffffff88;
+    padding: 32px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#facebook {
+    border: 1px solid #3b5998;
+}
+#twitter {
+    border: 1px solid #1D9BF0;
+}
+#instagram {
+    border: 1px solid #ED4956;
+}
+#whatsapp {
+    border: 1px solid #4FCE5D;
+}
+#telegram {
+    border: 1px solid #229ED9;
+}
+
+#facebook:hover {
+    background-color: #3b5998;
+    transition: all;
+    transition-duration: 0.4s;
+}
+
+#twitter:hover {
+    background-color: #1D9BF0;
+    transition: all;
+    transition-duration: 0.4s;
+}
+
+#instagram:hover {
+    background-color: #ED4956;
+    transition: all;
+    transition-duration: 0.4s;
+}
+
+#whatsapp:hover {
+    background-color: #4FCE5D;
+    transition: all;
+    transition-duration: 0.4s;
+}
+
+#telegram:hover {
+    background-color: #229ED9;
+    transition: all;
+    transition-duration: 0.4s;
+}
+
+.modal {
+    scale: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.active {
+    scale: 1;
+}
+
+/* here pointer-event is added to allow the access to click in case of overlay displays (in case of opacity=0/1) OR we can use visibility property instead */
+.overlay {
+    /* visibility: hidden; */
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+.overlayActive {
+    /* visibility: visible; */
+    opacity: 1;
+    pointer-events: initial;
+}

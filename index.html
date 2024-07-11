@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Share Modal</title>
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web\css\all.min.css">
+</head>
+<body>
+    <div class="wrapper h-[100vh] w-[100vw] bg-black relative"> 
+
+        <!-- main content -->
+        <div class="w-full h-full flex justify-center items-center absolute">
+            <!-- circle-1 -->
+            <div class="h-[13rem] w-[13rem] rounded-[50%] absolute top-[5%] left-[30%]" id="circle1"></div>
+
+            <!-- circle-2 -->
+            <div class="h-[19rem] w-[19rem] rounded-[50%] absolute bottom-[5%] right-[30%]" id="circle2"></div>
+
+            <!-- card-section -->
+            <div class="absolute flex flex-col items-center justify-evenly border-2 border-[#ffffff30] rounded-[15px] h-[492px] max-w-[410px] py-[24px] px-[50px]" id="card-section">
+                <div>
+                    <img src="./assets/profile-image.webp" alt="" class="h-[150px] w-[150px] border-2 border-[#ffffff30] rounded-[50%]">
+                </div>
+                <h2 class="text-white text-[2rem] font-bold">Love Babbar</h2>
+                <h3 class="text-[#ffffff85] text-[18px] font-bold">Founder, Code Help</h3>
+
+                <div class="flex flex-col md:flex-row gap-[10px] justify-between">
+                    <button class="border-2 border-[#ffffffb9] rounded-[4px] px-[10px] py-[7px] text-[#ffffffb9] text-sm flex items-center justify-center gap-[7px] cursor-pointer transition-all duration-[0.2s] hover:bg-[#ffffffb9] hover:text-[#131313] group" onclick="openModal()">
+                            <i class="fa-solid fa-share text-white group-hover:text-[#131313] transition-all duration-[0.2s]"></i>
+                            Share My Profile
+                    </button>
+                    <button class="w-[150px] border-2 border-[#ffffffb9] rounded-[4px] px-[10px] py-[7px] text-sm text-[#ffffffb9] flex items-center justify-center gap-[7px] cursor-pointer transition-all duration-[0.2s] hover:bg-[#ffffffb9] hover:text-[#131313]">Follow Me</button>
+                </div>
+            </div>
+
+        </div>
+
+        
+
+        <!-- overlay -->
+        <div class="overlay bg-[#5f5f5f83] h-full w-full absolute z-10 flex justify-center items-center">
+            <!-- modal container -->
+            <div class="modal flex flex-col w-[550px] absolute z-20 border-2 border-[#ffffff59] rounded-[20px] py-[20px] px-[25px] backdrop-blur-[10px] bg-[#00000088]">
+                <div class="flex justify-between items-center border-b-2 border-[#ffffff88] mb-[25px] pb-[12px]">
+                    <h1 class="text-3xl text-white font-extrabold">Share My Profile</h1>
+                    <i class="fa-solid fa-xmark text-white text-3xl cursor-pointer" onclick="closeModal()"></i>
+                </div>
+
+                <h3 class="text-white text-lg font-bold">Share this via</h3>
+
+                <!-- icon-container -->
+                <div class="flex justify-between items-center my-6 flex-wrap">
+                    
+                    <a href="#" class="icon group" id="facebook">
+                        <i class="fa-brands fa-facebook-f text-[#3b5998] group-hover:text-white transition-all duration-[0.4s] text-[27px]"></i>
+                    </a>
+                    
+                    <a href="#" class="icon group" id="twitter">
+                        <i class="fa-brands fa-twitter text-[#1D9BF0] group-hover:text-white transition-all duration-[0.4s] text-[27px]"></i>
+                    </a>
+                    
+                    <a href="#" class="icon group" id="instagram">
+                        <i class="fa-brands fa-instagram text-[#ED4956] group-hover:text-white transition-all duration-[0.4s] text-[27px]"></i>
+                    </a>
+                    
+                    <a href="#" class="icon group" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp text-[#4FCE5D] group-hover:text-white transition-all duration-[0.4s] text-[27px]"></i>
+                    </a>
+                    
+                    <a href="#" class="icon group" id="telegram">
+                        <i class="fa-brands fa-telegram text-[#229ED9] group-hover:text-white transition-all duration-[0.4s] text-[27px]"></i>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
